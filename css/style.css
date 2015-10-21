@@ -1,0 +1,66 @@
+html{
+	background-color: #fafafa;
+}
+body{
+	margin: 0px 5%;
+	background-color: #fafafa;
+}
+div.bar {
+    display: inline-block;
+    width: 20px;
+    background-color: teal;
+    margin-right: 2px;
+}
+svg .circle{
+	fill: yellow;
+	stroke: orange;
+	stroke-width: ;
+}
+svg .axis path, svg .axis line{
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+svg .axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+svg#canvas{
+	position: fixed;
+	margin-left: 46.5%;
+	margin-top: 5%;
+	border: 1px solid silver;
+}
+.instagram-item{
+	width: 46.5%;
+	background-color: white;
+	margin-bottom: 2.5%;
+	text-align: center;
+	padding: 2.5%;
+}
+.instagram-item p{
+	margin-bottom: 0px;
+}
+.instagram-item img{
+	width: 50%;
+}
+.instagram-item .username{
+	color: #125688;
+}
+.panel-body {
+    padding: 0px 15px;
+}
+#button_box{
+	margin-left: 46.5%;
+	position: fixed;
+	font-family: 'Indie Flower', serif;
+}
+.jumbotron{
+	text-align: center;
+	padding: 0px 5%;
+	font-family: 'Indie Flower', serif;
+}
+.jumbotron h1{
+	color: #125688;
+}
+

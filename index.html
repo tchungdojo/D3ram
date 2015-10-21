@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>d3ram</title>
+	<meta charset="utf-8" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+	<script src='./script.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src='./static/controllers/homeController.js'></script>
+	<script src='./static/factories/homeFactory.js'></script>
+</head>
+<body ng-controller='homeController'>
+	<div class="jumbotron">
+		<h1>D3ram</h1>
+		<p>Try to guess which instagram popular feed has the most likes! Start by clicking New Posts! then take a mental guess and click Show Likes!</p>
+	</div>
+	
+	<div>
+		
+		<div id='button_box'>
+			<button ng-click='popular()'>New Posts!</button>
+			<button id='click'>Show Likes!</button>
+			<button id='reset'>Play Again!</button>
+		</div>
+		<bars-Chart chart-data='chartData'></bars-Chart>
+		<div class="panel-body">
+	            <div class="instagram-item" ng-repeat="item in search">
+	                <div ng-switch on='item.type'>
+	                	<div ng-switch-when='image'>
+	                		<p>Image by: <b class='username'>{{item.user.username}}</b></p>
+	                		<p>{{item.caption.text}}</p>
+	                		<img ng-src="{{ item.images.low_resolution.url }}" src="" alt="">
+	                	</div>
+	                	<div ng-switch-when='video'>
+	                		<p>Video by: <b class='username'>{{item.user.username}}</b></p>
+	                		<p>{{item.caption.text}}</p>
+	                		<a href='{{item.videos.low_bandwidth.url}}' target="_blank"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span><img ng-src="{{ item.images.low_resolution.url }}" src="" alt=""></a>
+	                	</div>
+	                </div>
+	            </div>
+	    </div>
+	</div>
+   
+    
+</body>
+</html>
+
+<!-- // a form to search post base on hashtags.
+<p>Instagram Username</p>
+<form>
+	<input type='text' ng-model='search.hash'>
+	<input type='submit' value='Enter' ng-click='login()'>
+</form>
+<h3>#{{search.hash}}</h3> 
+-->
+
+<!-- // feature to load more post from a hashtag search form. 
+<form ng-if="search.items">
+	<input type='submit' value='More' ng-click='more()'>
+</form> 
+-->
+
+
+
+
+
+
+
+
+
