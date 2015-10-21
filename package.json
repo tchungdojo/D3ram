@@ -2,11 +2,12 @@
   "name": "d3ram",
   "version": "1.0.0",
   "description": "mental guessing game of most likes for populated instagram posts.",
-  "main": "script.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.13.3",
     "grunt": "^0.4.5",
-    "gzippo": "^0.2.0"
+    "gzippo": "^0.2.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "scripts": {

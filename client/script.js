@@ -1,6 +1,5 @@
-var myApp = angular.module('myApp', []).
-
-directive("barsChart", [
+var myApp = angular.module('myApp', [])
+.directive("barsChart", [
 	function(){
 		return {
 			restrict: "E",
@@ -114,6 +113,8 @@ directive("barsChart", [
 							})
 							.attr('fill', 'blue');
 						svg.selectAll(".username")
+							.transition()
+							.duration(1000)
 							.text(function(d){
 								return d.user.username;
 							})
@@ -137,7 +138,7 @@ directive("barsChart", [
 						svg.selectAll('.username')
 							.transition()
 							.attr('x', padding)
-							.attr('y', 0)
+							.attr('y', -10)
 							.text();
 							
 					})
@@ -149,11 +150,5 @@ directive("barsChart", [
 		};
 	}
 ]);
-var gzippo = require('gzippo');
-var express = require('express');
-var app = express();
 
-app.use(express.logger('dev'));
-app.use(gzippo.staticGzip("" + __dirname + "/dist"));
-app.listen(process.env.PORT || 5000);
            
