@@ -1,0 +1,33 @@
+{
+  "name": "d3ram",
+  "version": "1.0.0",
+  "description": "mental guessing game of most likes for populated instagram posts.",
+  "main": "script.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "grunt": "^0.4.5",
+    "gzippo": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tchungdojo/D3ram.git"
+  },
+  "keywords": [
+    "Instagram",
+    "API",
+    "D3.js"
+  ],
+  "author": "Tuyen Chung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tchungdojo/D3ram/issues"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "homepage": "https://github.com/tchungdojo/D3ram#readme"
+}
